@@ -1,5 +1,3 @@
-package aop.test;
-
 import aop.service.PersonServer;
 
 import org.junit.Test;
@@ -18,8 +16,4 @@ public class SpringAOPTest {
         bean.update("sa",1);
     }
 
-    @Test
-    public void quartzTest(){
-        ApplicationContext ctx = new ClassPathXmlApplicationContext("spring-quartz.xml");
-    }
 }
