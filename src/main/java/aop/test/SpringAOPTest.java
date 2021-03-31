@@ -17,4 +17,9 @@ public class SpringAOPTest {
         bean.save("ceshi");
         bean.update("sa",1);
     }
+
+    @Test
+    public void quartzTest(){
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("spring-quartz.xml");
+    }
 }
