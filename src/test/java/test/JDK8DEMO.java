@@ -36,6 +36,8 @@ public class JDK8DEMO {
         student6.setAge("18");
         student6.setSex(2);
 
+
+
         list.add(student1);
         list.add(student2);
         list.add(student3);
