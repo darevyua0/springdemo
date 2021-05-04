@@ -7,8 +7,9 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
-
-import static org.hamcrest.core.IsEqual.equalTo;
+/***
+ * JAVA8-让代码更优雅之List排序
+ */
 
 /**
  * Created by crj on 2017/7/25.
