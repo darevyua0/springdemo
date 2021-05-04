@@ -70,6 +70,7 @@ public class JDK8DEMO {
         demoArray.forEach(demo -> {
             System.out.println("年龄 "+demo.getAge() +"  性别 " +demo.getSex()+",");
         });
+
         System.out.println("多条件排序倒序 sex age 倒序****************");
         demoArray.sort(Comparator.comparing(Demo::getSex).reversed().thenComparing(Demo::getAge));
         demoArray.forEach(demo -> {
