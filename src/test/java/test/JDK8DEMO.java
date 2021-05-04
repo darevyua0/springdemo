@@ -5,6 +5,7 @@ package test;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 /***
@@ -35,6 +36,9 @@ public class JDK8DEMO {
         Student student6 = new Student();
         student6.setAge("18");
         student6.setSex(2);
+        Student student7 = new Student();
+        student7.setAge("18");
+        student7.setSex(2);
 
 
 
@@ -44,11 +48,17 @@ public class JDK8DEMO {
         list.add(student4);
         list.add(student5);
         list.add(student6);
+        list.add(student7);
        List<Demo> demos = new ArrayList<Demo>();
         //原始数据
         System.out.println("原始数据*******************");
         demos = list.stream().map(student-> new Demo(student.getAge(),student.getSex())).collect(Collectors.toList());
         demos.forEach(demo -> {
+            System.out.println("年龄 "+demo.getAge() +"  性别 " +demo.getSex()+",");
+        });
+        System.out.println("只取sex为0****************");
+        List<Demo> demorm =demos.stream().filter(demo -> demo.getSex() == 0).distinct().collect(Collectors.toList());
+        demorm.forEach(demo -> {
             System.out.println("年龄 "+demo.getAge() +"  性别 " +demo.getSex()+",");
         });
         System.out.println("筛选年龄大于12岁的*************");
@@ -79,6 +89,7 @@ public class JDK8DEMO {
         demoArray.forEach(demo -> {
             System.out.println("年龄 "+demo.getAge() +"  性别 " +demo.getSex()+",");
         });
+
 
 
     }
